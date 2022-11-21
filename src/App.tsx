@@ -1,24 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import axios, { AxiosResponse } from "axios";
+import React,{ useEffect, useState } from "react";
+import LoadingPage from "./pages/loadingPage/loadingPage";
+import DisplayPage from "./pages/displayPage/displayPage";
+import './App.css'
 function App() {
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+  const [data, setData] = useState<Object | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setError(null);
+        const response = await axios.get('http://kuiz.kixlab.org:8080/getOptions').then((response: AxiosResponse) => {
+          console.log(response.data);
+          setData( response.data );
+          setLoading(false);
+      });
+      } catch (error) {
+        setLoading(false);
+        setData(null)
+        setError("Error: " + JSON.stringify(error));
+      }
+    };
+    fetchData();
+  }, []);
+  console.log(data)
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {loading && <LoadingPage/>}
+      {(!loading && data!==null) && <DisplayPage data={data} setData={setData}/>}
     </div>
   );
 }
