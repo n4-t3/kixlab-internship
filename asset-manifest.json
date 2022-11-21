@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/kixlab-internship/static/css/main.6cf711db.css",
+    "main.js": "/kixlab-internship/static/js/main.879e709d.js",
+    "static/js/787.aabe9759.chunk.js": "/kixlab-internship/static/js/787.aabe9759.chunk.js",
+    "index.html": "/kixlab-internship/index.html",
+    "main.6cf711db.css.map": "/kixlab-internship/static/css/main.6cf711db.css.map",
+    "main.879e709d.js.map": "/kixlab-internship/static/js/main.879e709d.js.map",
+    "787.aabe9759.chunk.js.map": "/kixlab-internship/static/js/787.aabe9759.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6cf711db.css",
+    "static/js/main.879e709d.js"
+  ]
+}
