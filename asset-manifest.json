@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/kixlab-internship/static/css/main.6cf711db.css",
-    "main.js": "/kixlab-internship/static/js/main.04e3e3bb.js",
+    "main.css": "/kixlab-internship/static/css/main.eb8cb842.css",
+    "main.js": "/kixlab-internship/static/js/main.4851050e.js",
     "static/js/787.aabe9759.chunk.js": "/kixlab-internship/static/js/787.aabe9759.chunk.js",
+    "static/media/1.png": "/kixlab-internship/static/media/1.a130e50348d3d717fcd1.png",
+    "static/media/2.png": "/kixlab-internship/static/media/2.3a5e74d97cbaf3df1413.png",
     "index.html": "/kixlab-internship/index.html",
-    "main.6cf711db.css.map": "/kixlab-internship/static/css/main.6cf711db.css.map",
-    "main.04e3e3bb.js.map": "/kixlab-internship/static/js/main.04e3e3bb.js.map",
+    "main.eb8cb842.css.map": "/kixlab-internship/static/css/main.eb8cb842.css.map",
+    "main.4851050e.js.map": "/kixlab-internship/static/js/main.4851050e.js.map",
     "787.aabe9759.chunk.js.map": "/kixlab-internship/static/js/787.aabe9759.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6cf711db.css",
-    "static/js/main.04e3e3bb.js"
+    "static/css/main.eb8cb842.css",
+    "static/js/main.4851050e.js"
   ]
 }
