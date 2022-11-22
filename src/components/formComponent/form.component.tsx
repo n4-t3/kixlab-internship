@@ -2,11 +2,19 @@ import formCSS from './form.module.scss'
 import {useState} from 'react'
 import axios, { AxiosResponse } from "axios";
 
-const FormComponent = ({setData}:any) =>{
-    const [optionLabel, setOptionLabel] = useState()
-    const [isAnswer, setIsAnswer] = useState(true)
+interface StateData {
+    [key: string]: string[];
+}
 
-    const handleChange = (e:any) =>{
+interface FormComponentProps {
+    setData: React.Dispatch<React.SetStateAction<StateData>>; 
+}
+
+const FormComponent = ({setData}:FormComponentProps) =>{
+    const [optionLabel, setOptionLabel] = useState<string | null>(null)
+    const [isAnswer, setIsAnswer] = useState<boolean>(true)
+
+    const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) =>{
         if(e.target.name==="input"){
             setOptionLabel(e.target.value)
         }else{
@@ -18,7 +26,7 @@ const FormComponent = ({setData}:any) =>{
         }
     }
 
-    const handleSubmit = (e:any) =>{
+    const handleSubmit: React.FormEventHandler = (e) =>{
         e.preventDefault()
 
         axios.post('http://kuiz.kixlab.org:8080/submitOption', {

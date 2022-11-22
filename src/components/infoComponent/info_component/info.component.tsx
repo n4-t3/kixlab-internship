@@ -10,9 +10,8 @@ const InfoComponent = ({title, data}:InfoComponentProps) =>{
         <>
         <h1 className={infoCSS.header}>{ title }</h1>
             {data.map((element:string,index:number)=>{
-                console.log(element)
                 return(
-                    <div className={infoCSS.content} key={index}>{element}</div>
+                    <div className={infoCSS.content} key={String(index)+element}>{element}</div>
                 )
             })}
         </>
