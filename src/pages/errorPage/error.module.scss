@@ -1,0 +1,16 @@
+.container{
+    max-width: 600px;
+    margin:auto;
+    .wrapper{
+        margin:20px;
+        .imgWrapper{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            justify-content: center;
+        }
+        .img{
+            max-width: 500px;
+        }
+    }
+}
